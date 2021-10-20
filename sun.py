@@ -1,3 +1,8 @@
+'''
+Author: YHR
+Description: This code generates the sunrise and sunset times of any given coordinates for every day over 365 days in seconds.
+'''
+
 import tkinter as tk
 from PIL import Image, ImageTk
 
