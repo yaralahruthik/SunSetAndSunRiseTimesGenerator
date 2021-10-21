@@ -72,18 +72,18 @@ def getYearSun(lat, long, seconds_added_to_sunrise, seconds_added_to_sunset, cit
                 sunRise = sun.get_local_sunrise_time(tempDate)
                 sunSet = sun.get_local_sunset_time(tempDate)
                 sunRiseInSeconds = sunRise.hour * 60 * 60 + \
-                    sunRise.minute * 60 + seconds_added_to_sunrise  # 10 mins added for sunrise
+                    sunRise.minute * 60 + seconds_added_to_sunrise  # seconds added to sunset
                 sunSetInSeconds = sunSet.hour * 60 * 60 + sunSet.minute * \
-                    60 - seconds_added_to_sunset  # 10 mins removed for sunset
+                    60 + seconds_added_to_sunset  # seconds added to sunset
                 monthTimes.append((sunRiseInSeconds, sunSetInSeconds))
             else:
                 tempDate = datetime.date(2021, i, j)
                 sunRise = sun.get_local_sunrise_time(tempDate)
                 sunSet = sun.get_local_sunset_time(tempDate)
                 sunRiseInSeconds = sunRise.hour * 60 * 60 + \
-                    sunRise.minute * 60 + seconds_added_to_sunrise  # 10 mins added for sunrise
+                    sunRise.minute * 60 + seconds_added_to_sunrise  # seconds added to sunset
                 sunSetInSeconds = sunSet.hour * 60 * 60 + sunSet.minute * \
-                    60 - seconds_added_to_sunset  # 10 mins removed for sunset
+                    60 + seconds_added_to_sunset  # seconds added to sunset
                 monthTimes.append((sunRiseInSeconds, sunSetInSeconds))
         yearTimes.append(monthTimes)
         monthTimes = []

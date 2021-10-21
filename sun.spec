@@ -7,7 +7,7 @@ block_cipher = None
 a = Analysis(['sun.py'],
              pathex=['D:\\Skills\\Projects\\Mom\\sun'],
              binaries=[],
-             datas=[('img/logo.png', 'img')],
+             datas=[],
              hiddenimports=[],
              hookspath=[],
              hooksconfig={},
@@ -37,4 +37,4 @@ exe = EXE(pyz,
           disable_windowed_traceback=False,
           target_arch=None,
           codesign_identity=None,
-          entitlements_file=None , icon='logo.ico')
+          entitlements_file=None )
